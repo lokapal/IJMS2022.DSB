@@ -42,7 +42,7 @@ sort -k1,1 -k2,2n -k3,3n intersect_reps.bed -o intersect_reps.bed
 bedtools merge -c 4 -o mean -i intersect_reps.bed > intersect_merged.bed
 ./lib/mergebedgraphmean.sh intersect_reps.bedGraph HEK293.DSB.hg38.nodfam.intersect.bedGraph
 ./lib/addSubseq.pl /usr/local/genomes/hg38.mfa intersect_merged.bed > HEK293.DSB.hg38.nodfam.intersect.txt
-sort -k1,1V -k2,2n -k3,3n HEK293.DSB.hg38.nodfam.intersect.txt -o HEK293.DSB.hg38.nodfam.intersect.txt
+sort -k1,1 -k2,2n -k3,3n HEK293.DSB.hg38.nodfam.intersect.txt -o HEK293.DSB.hg38.nodfam.intersect.txt
 #
 # Part 2. Assign genes to HEK293T DSB-associated intersected replicates noDFAM mappings
 cp HEK293.DSB.hg38.nodfam.intersect.txt DSB.bed
