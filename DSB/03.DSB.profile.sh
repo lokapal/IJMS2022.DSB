@@ -31,5 +31,5 @@ rm -f *.wig
 cd ..
 wiggletools write_bg DSB_mean.bedGraph mean rep1.wig rep2.wig
 sort -k1,1 -k2,2n -k3,3n DSB_mean.bedGraph -o DSB_mean.bedGraph
-bedGraphToBigWig DSB_mean.bedGraph ~/bin/hg38.chr.sizes HEK293.DSB.fseq.intersect.bw
+bedGraphToBigWig DSB_mean.bedGraph ./lib/hg38.chr.sizes HEK293.DSB.fseq.intersect.bw
 rm -f DSB_mean.bedGraph density*.bed
